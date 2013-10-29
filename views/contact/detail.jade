@@ -1,0 +1,32 @@
+extends ../layout
+
+block content
+  h2.display-data Contact Detail
+            
+  table.table.table-bordered
+    tr
+      th Property
+      th Value
+        tr
+          td First
+          td= display(contact.first)
+        tr
+          td Last
+          td= display(contact.last)
+        tr
+          td Address
+          td= display(contact.address)
+        tr
+          td Company
+          td= display(contact.company)
+        tr
+          td Email
+          td= display(contact.email)
+
+
+  .form-actions
+    a.btn.btn-warning(href="/contacts") Back
+    | 
+    a.btn.btn-primary(href="/contacts/" + contact._id + "/edit") Edit
+    | 
+    a.btn.btn-danger(href="/contacts/" + contact._id + "/delete") Delete

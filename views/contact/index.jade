@@ -1,0 +1,42 @@
+extends ../layout
+
+block content
+  h2.display-data All Contacts
+    a.btn.btn-primary.pull-right(href="/contacts/create") Create a new Contact
+
+    script(type='text/javascript')
+        $(document).ready(function() {
+          $.tablesorter.themes.bootstrap.table = "table table-bordered table-striped";
+          $(" table.tablesorter ").tablesorter({
+          sortList: [[0,0]],
+          theme : 'jui' // theme "jui" and "bootstrap" override the uitheme widget option in v2.7+
+          });
+     });
+   
+
+  table.tablesorter(style="width:100%")
+    tr
+        th First
+        th Last
+        th Address
+        th Company
+        th Email
+        th.last
+
+    each contact in contacts
+      tr
+        td= display(contact.first)
+        td= display(contact.last)
+        td= display(contact.address)
+        td= display(contact.company)
+        td= display(contact.email)
+
+        td
+          a(href="/contacts/" + contact._id + "/detail", title="Detail")
+            i.icon-zoom-in
+          | 
+          a(href="/contacts/" + contact._id + "/edit", title="Edit")
+            i.icon-edit
+          | 
+          a(href="/contacts/" + contact._id + "/delete", title="Delete")
+            i.icon-remove

@@ -1,0 +1,143 @@
+html {
+  height: 100%;
+}
+
+body {
+  font-size: 100%;
+  font-family: calibri,tahoma,arial,sans-serif;
+  color: white;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  /*margin: 0px 0px 20px 0px;*/
+}
+
+#radial-center {
+  /* fallback */
+  background-color: #5B7BBC;
+  /*background-image: url(images/radial_bg.png);*/
+  background-position: center center;
+  background-repeat: no-repeat;
+  
+  /* Safari 4-5, Chrome 1-9 */
+  /* Can't specify a percentage size? Laaaaaame. */
+  background: -webkit-gradient(linear, 0% 0% , 0% 100%, from(#002463), to(#5B7BBC));
+  background-attachment: fixed;
+  
+  /* Safari 5.1+, Chrome 10+ */
+  background: -webkit-linear-gradient(top, #002463, #5B7BBC);
+  background-attachment: fixed;
+  
+  /* Firefox 3.6+ */ 
+  background: -moz-linear-gradient(top, #002463, #5B7BBC);
+  background-attachment: fixed;
+  
+  /* IE 10 */ 
+  background: -ms-linear-gradient(top, #002463, #5B7BBC);
+  background-attachment: fixed;
+  
+  /* Opera cannot do radial gradients yet */
+}
+
+div#links {
+  position: absolute;
+  float: left;
+  /*display: inline-block;*/
+  top: 80px;
+  font-size: 100%;
+  padding: 10px 15px 15px 15px;
+  width: 200px;
+}
+#links ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+#links li {
+  padding: 3px 0px;
+}
+a:link{
+  color:#2CAE9C;
+}
+
+a:visited {
+  color:#B5B5B5
+}
+
+div#content {
+  position: absolute;
+  float: right;
+  margin-top: 0px;
+  margin-right: 20px;
+  margin-left: 200px;
+  padding-right: 10px;
+  /*width: 80%;*/
+}
+div#nfl-logo {
+  /*background: url('image.jpg') no-repeat top center;*/
+  /*height: 300px;*/
+  /*width: 100%;*/
+  text-align: center;
+  vertical-align: middle;
+}
+
+h1 {
+  padding: 0px 15px 0px 15px;
+}
+h2, h3 {
+  margin: 0px;
+  padding: 0px;
+}
+
+p {
+  font-size: 125%;
+}
+
+img.sentiment {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0;
+}
+
+/* tables */
+table.tablesorter {
+  margin:10px 0pt 15px;
+  text-align: left;
+  border: 1px solid #FFF;
+}
+table.stats {
+  margin:10px 0pt 15px;
+  text-align: left;
+  /*border: 1px solid #FFF;*/
+}
+table.tablesorter thead tr th, table.stats tbody tr th {
+  border: 1px solid #FFF;
+  padding: 4px;
+}
+table.stats thead {
+  text-align: center;
+  border: 0px;
+}
+table.stats tbody {
+  border: 1px solid #FFF;
+}
+table.tablesorter thead tr .header :after {
+  content: url(/static/bg-w.gif);
+  /*background-repeat: no-repeat;*/
+  /*position: center right;*/
+  cursor: pointer;
+}
+table.tablesorter tbody td, table.stats tbody td {
+  color: #3D3D3D;
+  padding: 4px;
+  background-color: #FFF;
+  vertical-align: top;
+}
+table.tablesorter thead tr .headerSortUp :after {
+  content: url(/static/asc-w.gif);
+}
+table.tablesorter thead tr .headerSortDown :after {
+  content: url(/static/desc-w.gif);
+}
+table.tablesorter thead tr .headerSortDown, table.tablesorter thead tr .headerSortUp {
+  /*background-color: #8dbdd8;*/
+}

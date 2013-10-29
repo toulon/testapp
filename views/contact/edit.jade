@@ -1,0 +1,38 @@
+extends ../layout
+include ../mixins/form-helpers
+
+block content
+  form#contact-form.form-horizontal(action="/contacts/" + contact._id + "/edit", method="POST")
+    fieldset
+      legend Edit Contact
+
+      .control-group
+        mixin label("first", "First")        
+        .controls
+          mixin text("first", contact.first)
+          mixin errorMessage(contact, 'first')
+      .control-group
+        mixin label("last", "Last")        
+        .controls
+          mixin text("last", contact.last)
+          mixin errorMessage(contact, 'last')
+      .control-group
+        mixin label("address", "Address")        
+        .controls
+          mixin text("address", contact.address)
+          mixin errorMessage(contact, 'address')
+      .control-group
+        mixin label("company", "Company")        
+        .controls
+          mixin text("company", contact.company)
+          mixin errorMessage(contact, 'company')
+      .control-group
+        mixin label("email", "Email")        
+        .controls
+          mixin text("email", contact.email)
+          mixin errorMessage(contact, 'email')
+
+    .form-actions
+      a.btn.btn-warning(href="/contacts") Back
+      | 
+      input.btn.btn-primary(type="submit", value="Save")

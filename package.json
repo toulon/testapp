@@ -1,0 +1,21 @@
+{
+  "name": "testapp",
+  "version": "0.0.0",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "express": "3.3.x",
+    "jade": ">0.0.1",
+    "mongoose": "3.6.x",
+    "connect-mongo": "0.3.x",
+    "cjade": "~0.1.9"
+  },
+  "devDependencies": {
+    "mocha": "*"
+  },
+  "scripts": {
+    "start": "nodemon -w models -w config -w routes app.js"
+  },
+  "repository": "",
+  "private": true
+}
